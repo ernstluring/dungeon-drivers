@@ -32,15 +32,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void Start () {
-//		gridWidth = GameManager.Instance.gridInfo.GridWidth;
-//		gridHeight = GameManager.Instance.gridInfo.GridHeight;
 		gridWidth = player.GetGameManager.gridInfo.GridWidth;
 		gridHeight = player.GetGameManager.gridInfo.GridHeight;
-
-//		foreach (ObjectRotation c in GetComponentsInChildren<ObjectRotation>()) {
-//			if (c.gameObject.activeInHierarchy)
-//				wheels.Add (c);
-//		}
 	}
 
 	public void InitMovement (string direction) {
@@ -81,11 +74,6 @@ public class PlayerMovement : MonoBehaviour {
 			startPosition = transform.position;
 			yield return null;
 		}
-//		if (wheels[0].Speed < 250) {
-//			foreach (ObjectRotation w in wheels) {
-//				w.Speed = 250;
-//			}
-//		}
 		yield return new WaitForSeconds (0.5f);
 		GetComponent<BoxCollider>().enabled = true;
 	}

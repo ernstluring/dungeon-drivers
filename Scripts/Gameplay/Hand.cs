@@ -85,7 +85,6 @@ public class Hand : MonoBehaviour {
 		}
 		cardSelectedPointer = 0;
 		selectedCardObject = cardsInHandList[cardSelectedPointer];
-//		ScaleSelectedCard ();
 	}
 
 	public void SelectCardRight () {
@@ -201,16 +200,12 @@ public class Hand : MonoBehaviour {
 
 		for (int i = 0; i < attackDirs.Length; i++) {
 			if (attackDirs[i] == "forward") {
-//				player.IndicatorPointer.position += Vector3.forward * GameManager.Instance.gridInfo.GridHeight;
 				player.IndicatorPointer.position += Vector3.forward * player.GetGameManager.gridInfo.GridHeight;
 			} else if (attackDirs[i] == "back") {
-//				player.IndicatorPointer.position += Vector3.back * GameManager.Instance.gridInfo.GridHeight;
 				player.IndicatorPointer.position += Vector3.back * player.GetGameManager.gridInfo.GridHeight;
 			} else if (attackDirs[i] == "left") {
-//				player.IndicatorPointer.position += Vector3.left * GameManager.Instance.gridInfo.GridWidth;
 				player.IndicatorPointer.position += Vector3.left * player.GetGameManager.gridInfo.GridWidth;
 			} else if (attackDirs[i] == "right") {
-//				player.IndicatorPointer.position += Vector3.right * GameManager.Instance.gridInfo.GridWidth;
 				player.IndicatorPointer.position += Vector3.right * player.GetGameManager.gridInfo.GridWidth;
 			}
 		}

@@ -33,10 +33,6 @@ public class DrawState : State {
 
 	public override void Run ()
 	{
-//		if (!machine.activePlayer.HandCamera.gameObject.activeInHierarchy) {
-//			machine.activePlayer.HandCamera.gameObject.SetActive(true);
-//		}
-
 		for (int i = 0; i < machine.Players.Count; i++) {
 			machine.Players[i].phaseIndicator.SetText("Drawing");
 			machine.Players[i].phaseIndicator.DoTransition();
@@ -50,10 +46,6 @@ public class DrawState : State {
 				p.GetHand.DrawCards ();
 				p.HandCamera.enabled = false;
 			}
-			machine.AdvanceAndRun ();
-			firstTimeDrawingCount++;
-		} else if (firstTimeDrawingCount == 1) {
-			// When the second player plays for the first time he already has cards in his hand
 			machine.AdvanceAndRun ();
 			firstTimeDrawingCount++;
 		} else {
@@ -181,10 +173,6 @@ public class EndState : State {
 	
 	public override void Run ()
 	{
-		// Reset stats of active player and disable hand camera
-//		machine.activePlayer.ResetStats ();
-//		machine.activePlayer.HandCamera.gameObject.SetActive(false);
-
 		// When the active player is in pull position at the end of his turn, he gets health.
 		if (machine.activePlayer.boardStatusEffect != null && machine.activePlayer.boardStatusEffect is HealPerTurn) {
 			machine.activePlayer.boardStatusEffect.Execute ();

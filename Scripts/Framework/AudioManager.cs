@@ -40,9 +40,6 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayAttackClip (PlayerType playerType) {
-//		if (Random.value < 0.5f)
-//			return;
-
 		switch (playerType) {
 		case PlayerType.DWARF:
 			audioClip = dwarfAudioClips.attackClips[GameManager.random.Next (0, dwarfAudioClips.attackClips.Count-1)];
@@ -59,9 +56,6 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayGetDamageClips (PlayerType playerType, int healthAmount) {
-//		if (Random.value < 0.5f)
-//			return;
-
 		switch (playerType) {
 		case PlayerType.DWARF:
 			if (healthAmount < 20 && healthAmount >= 14) {
@@ -110,8 +104,6 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayPullPositionClip (PlayerType playerType) {
-//		if (Random.value < 0.5f) return;
-
 		switch (playerType) {
 		case PlayerType.DWARF:
 			audioClip = dwarfAudioClips.pullPositionClips[GameManager.random.Next (0, dwarfAudioClips.pullPositionClips.Count-1)];

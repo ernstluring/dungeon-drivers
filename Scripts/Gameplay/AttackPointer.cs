@@ -19,26 +19,6 @@ public class AttackPointer : MonoBehaviour {
 		}
 	}
 
-//	public void SetParticle (ParticleSystem p) {
-//		attackParticle = p;
-//	}
-
-//	public void InitParticle (ParticleSystem p) {
-//		ParticleSystem ps = ParticleSystem.Instantiate (p);
-//		ps.transform.SetParent (this.transform);
-//		ps.transform.localPosition = new Vector3 (0, 1, 0);
-//		StartCoroutine (PlayParticle (ps));
-//	}
-
-//	private IEnumerator PlayParticle (ParticleSystem p) {
-//		yield return new WaitForSeconds (0.5f);
-//		p.Play ();
-//		EnableCollider ();
-//		yield return new WaitForSeconds (p.duration);
-//		DisableCollider ();
-//		transform.localPosition = Vector3.zero;
-//	}
-
 	public void StartExplosion (GameObject g) {
 		StartCoroutine (PlayExplosion (g));
 	}

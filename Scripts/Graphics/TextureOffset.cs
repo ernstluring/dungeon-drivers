@@ -14,8 +14,6 @@ public class TextureOffset : MonoBehaviour {
 	}
 	
 	void Update () {
-//		float offset = Time.time * scrollSpeed;
-
 		offset = new Vector2 (0, Time.time * scrollSpeed);
 
 		rend.material.SetTextureOffset("_MainTex", -offset);

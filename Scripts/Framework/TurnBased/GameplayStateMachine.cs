@@ -39,12 +39,10 @@ public class GameplayStateMachine : StateMachine {
 
 		activePlayer = players[0];
 		activePlayerNumber = activePlayer.PlayerNumber;
-//		activePlayer.HandCamera.gameObject.SetActive(true);
 
 		foreach (Player p in this.players) {
 			if (p.PlayerNumber != activePlayerNumber) {
 				passivePlayers.Add (p);
-//				p.HandCamera.gameObject.SetActive(false);
 			}
 		}
 
